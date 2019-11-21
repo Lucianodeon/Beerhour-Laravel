@@ -41,7 +41,7 @@ class comentarioController extends Controller
     $post=new comentariosModelo;
     $post->descripcion=$request["descripcion"];
     $post->id_user=Auth::user()->id;
-
+    
     $post->like=0;
 
 

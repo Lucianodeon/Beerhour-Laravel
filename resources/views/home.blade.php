@@ -40,7 +40,8 @@
 
   <div class="content">
     <div class="content-nav">
-    <img src="storage/{{$post->user->avatar}}" alt="foto2"><h2>{{ $post->user->name }}</h2>
+  <a href="/profile/{{$post->user->id}}">  <img src="storage/{{$post->user->avatar}}" alt="foto2"></a>
+    <h2>{{ $post->user->email }}</h2>
     </div>
     <div class="content-img">
       <img src="storage/{{$post->foto}}" alt="foto2">
@@ -63,7 +64,7 @@
           </div>
       </form>
     </div>
-
+</div>
 
 @endforeach
 
