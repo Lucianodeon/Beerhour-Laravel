@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -82,6 +82,11 @@
                         <div class="form-group row">
                               <label for="fechanac" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
                               <input type="date" name="fechanac" min="1909-01-01"max="2002-01-01" value="{{ old('fechanac') }}">
+                        </div>
+                        <div class="form-group row">
+                          <label for="avatar">Imagen de perfil</label><br>
+                          <input type="file" id="avatar" class="form-control" name="avatar" value="">
+                          <span class="small text-danger"></span>
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
