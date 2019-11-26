@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+
         <title>BEER HOUR</title>
                 <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -79,31 +81,53 @@
                     @endauth
                 </div>
             @endif
+            <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push">
 
-            <div class="beerhour">
-            <img src="img/logo.png" alt="logo_beerhour">
-            <h1>beer hour</h1>
-            <h2>Don´t Worry Beer Happy</h2>
-            </div>
-            <div class="text3" id="distinto">
-              <img src="img/botellas-cerveza.png" alt="foto1r">
-              <h2>¿Queres variedad?</h2>
-              <h3>¡Encuentra a los Brewers que se ajusten a tus gustos!</h2>
-            </div>
-            <div class="text3">
-              <img src="img/_DSC0202.jpg" alt="foto2">
-              <h2>¿Buscando gente a quien enseñarle tu cerveza?</h2>
-              <h3>¡Aqui te encontraran ellos primero!</h2>
-            </div>
-            <div class="text3">
-              <img src="img/mesa-vaso.png" alt="fot3">
-              <h2>¿Sos mayorista?</h2>
-              <h3>¡Este es tu lugar!</h3>
-            <a href="{{ route('register') }}">Register</a>
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="img/_DSC0109.jpg"  alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                            <h2 class="uk-margin-remove">¿Queres variedad?</h2>
+                            <p class="uk-margin-remove">¡Encuentra a los Brewers que se ajusten a tus gustos!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/_DSC0202.jpg" alt="" uk-cover>
+                        <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+                            <h3 class="uk-margin-remove">¿Buscando gente a quien enseñarle tu cerveza?</h3>
+                            <p class="uk-margin-remove">¡Aqui te encontraran ellos primero!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/mesa-vaso.png" alt="" uk-cover>
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                            <h3 class="uk-margin-remove">¿Sos mayorista?</h3>
+                            <p class="uk-margin-remove">¡Este es tu lugar!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/_DSC0216.jpg" alt="" uk-cover>
+                          <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                            <h3 class="uk-margin-remove">Registrate aca! Barrilete Cosmico!</h3>
+                            <p class="uk-margin-remove"><a href="{{ route('register') }}">Register</a></p>
+                          </div>
+                        </li>
+
+                </ul>
+
+                <div class="uk-light">
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                </div>
+
             </div>
 
 
+
+
             </div>
-        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
     </body>
 </html>
