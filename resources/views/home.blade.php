@@ -24,10 +24,10 @@
 
       <main class="usar">
         <div class="content">
-      <form method="POST" action="/addpost" enctype="multipart/form-data">
+      <form class = "centrar" method="POST" action="/addpost" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
-          <label for="avatar">Ingrese una foto</label><br>
+          <label class = "ingresar" for="avatar">Ingrese una foto</label><br>
           <input type="file" id="foto" class="form-control" name="foto" value="">
           <span class="small text-danger"></span>
         </div>
