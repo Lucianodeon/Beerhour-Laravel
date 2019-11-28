@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\postModelo;
+use Overtrue\LaravelFollow\Traits\CanBeLiked;
 
 class postController extends Controller
 {
+  use CanBeLiked;
     /**
      * Display a listing of the resource.
      *
@@ -47,7 +49,7 @@ class postController extends Controller
       $post->descripcion=$request["descripcion"];
       $post->id_user=Auth::user()->id;
       $post->foto=$nombreArchivo;
-    
+
       $post->save();
     }
 

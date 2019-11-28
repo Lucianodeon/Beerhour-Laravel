@@ -40,7 +40,7 @@
 
   <div class="content">
     <div class="content-nav">
-  <a href="/profile/{{$post->user->id}}">  <img src="storage/{{$post->user->avatar}}" alt="foto2"></a>
+  <a href="/profile/{{$post->user->id}}">  <img src="/storage/{{$post->user->avatar}}" alt="foto2"></a>
     <h2>{{ $post->user->email }}</h2>
     </div>
     <div class="content-img">
@@ -48,7 +48,12 @@
     </div>
     <div class="content-pie">
       <h3>{{ $post->descripcion }}</h3>
-
+      @if ($post->cantidadComentarios==null)
+        <h3>{{"No hay comentarios, Soyez le premier!"}}</h3>
+      @else @for ($i=0; $i <=$post->cantidadComentarios ; $i++)
+        {{$post->$i->descripcion}}
+      @endfor
+      @endif
         <form method="POST" action="/addcoment" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
@@ -68,41 +73,7 @@
 
 @endforeach
 
-        <div class="content">
-          <div class="content-nav">
-          <img src="img/pp.jpg" alt="foto2"><h2>juancho-kpo</h2>
-          </div>
-          <div class="content-img">
-            <img src="img/alala.jpg" alt="foto2">
-          </div>
-          <div class="content-pie">
-            <h3>Aca tirando magia</h3>
-          </div>
 
-
-      <div class="content">
-        <div class="content-nav">
-        <img src="img/pp.jpg" alt="foto2"><h2>juancho-kpo</h2>
-        </div>
-        <div class="content-img">
-          <img src="img/alala.jpg" alt="foto2">
-        </div>
-        <div class="content-pie">
-          <h3>Aca tirando magia</h3>
-        </div>
-
-      </div>
-      <div class="content">
-        <div class="content-nav">
-        <img src="img/pp.jpg" alt="foto2"><h2>juancho-kpo</h2>
-        </div>
-        <div class="content-img">
-          <img src="img/biru.jpeg" alt="foto2">
-        </div>
-        <div class="content-pie">
-          <h3>ビールを飲みましょうか</h3>
-        </div>
-      </div>
 
       </main>
     </body>

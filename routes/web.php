@@ -23,3 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile/{id}', 'profileController@index');
 Route::post('/addpost','postController@store');
 Route::post('/addcoment','comentarioController@store');
+Route::get('change-password', 'ChangePasswordController@index');
+Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
+Route::get('users', 'HomeController@users')->name('users');
+Route::get('user/{id}', 'HomeController@user')->name('user.view');
+Route::post('ajaxRequest', 'HomeController@ajaxRequest')->name('ajaxRequest');
