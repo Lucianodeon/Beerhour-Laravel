@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\postModelo;
 use App\User;
 
+
 class HomeController extends Controller
 
 
@@ -62,6 +63,15 @@ public function ajaxRequest(Request $request){
 
     $user = User::find($request->user_id);
     $response = auth()->user()->toggleFollow($user);
+
+
+    return response()->json(['success'=>$response]);
+}
+public function ajaxRequest2(Request $request){
+
+
+    $post = postModelo::find($request->id);
+    $response = auth()->user()->toggleLike($post);
 
 
     return response()->json(['success'=>$response]);

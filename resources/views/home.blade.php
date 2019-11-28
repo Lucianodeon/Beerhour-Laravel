@@ -1,12 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
       <meta charset="utf-8">
+      <script src="{{ asset('js/likes.js') }}" defer></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+      <meta name="csrf-token" content="{{ csrf_token() }}" />
+      <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Lobster&display=swap" rel="stylesheet">
       <title>BEER HOUR</title>
       <title></title>
@@ -48,6 +57,14 @@
     </div>
     <div class="content-pie">
       <h3>{{ $post->descripcion }}</h3>
+      <div class="panel-footer">
+                               <h4><a href="#" title="Nature Portfolio">{{ $post->title }}</a></h4>
+                               <span class="pull-right">
+                                   <span class="like-btn">
+                                       <i id="like{{$post->id}}" class="glyphicon glyphicon-thumbs-up {{ auth()->user()->hasLiked($post) ? 'like-post' : '' }}"></i> <div id="like{{$post->id}}-bs3">{{ $post->likers()->get()->count() }}</div>
+                                   </span>
+                               </span>
+      </div>
       @if ($post->cantidadComentarios==null)
         <h3>{{"No hay comentarios, Soyez le premier!"}}</h3>
       @else @for ($i=0; $i <=$post->cantidadComentarios ; $i++)
@@ -76,8 +93,9 @@
 
 
       </main>
+
     </body>
-    </div>
+
   </html>
 
 
