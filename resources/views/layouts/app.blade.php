@@ -24,7 +24,7 @@
   <header> <!-- Encabezadp -->
     <nav class="main-nav">
 
-      <a href=@php view("home") @endphp><h2 class="logo"><img src="img/logo.png" alt="logo_beerhour"> BEER HOUR</h2></a>
+      <a href="{{ route('home') }}"><h2 class="logo"><img src="img/logo.png" alt="logo_beerhour"> BEER HOUR</h2></a>
 
       <ul class="menu access">
         <li><a class="usuarios" href="{{ route('users') }}"> Users </a></li>
