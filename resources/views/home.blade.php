@@ -18,21 +18,20 @@
       <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Lobster&display=swap" rel="stylesheet">
       <title>BEER HOUR</title>
-      <title></title>
     </head>
     <body class="user">
 
       <main class="usar">
         <div class="content">
-      <form method="POST" action="/addpost" enctype="multipart/form-data">
+      <form class = "centrar" method="POST" action="/addpost" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
-          <label for="avatar">Ingrese una foto</label><br>
+          <label class = "ingresar" for="avatar">Ingrese una foto</label><br>
           <input type="file" id="foto" class="form-control" name="foto" value="">
           <span class="small text-danger"></span>
         </div>
         <div class="form-group row">
-          <textarea name="descripcion" rows="8" cols="80" ></textarea>
+          <textarea class="redondeo" name="descripcion" rows="8" cols="80" ></textarea>
         </div>
 
             <div class="form-group row mb-0">
