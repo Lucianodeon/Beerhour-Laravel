@@ -51,6 +51,8 @@ class postController extends Controller
       $post->foto=$nombreArchivo;
 
       $post->save();
+
+      
     }
 
     /**
