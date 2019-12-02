@@ -56,7 +56,40 @@ color: black;
 	overflow: hidden;
   color: white;
 	width: 100%;
+}
 
+.backgroundNav{
+	background-color: rgb(6, 11, 40);
+  padding: 10px 15px;
+  overflow: hidden;
+  color: white;
+  width: 100%;
+}
+
+.backgroundNav img{
+	width:50px;
+	background-color: white;
+	border-radius: 50%;
+	border: solid 1px black;
+}
+
+.backgroundNav a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.backgroundNav a {
+	margin-right: 30px;
+	line-height: 39px;
+	border-top: 40px;
+	margin-top: 5px;
+	margin-bottom: -15px;
+}
+
+.login-register{
+	float: right;
+	padding-top: 7px;
 }
 
 .main-nav li a {

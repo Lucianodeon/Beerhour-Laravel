@@ -69,7 +69,8 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links backgroundNav">
+                  <div class="login-register">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -79,6 +80,8 @@
                             <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
+                    </div>
+                      <a class = "logo logoNav" href=""><h2 class="logo"> <img src="img/logo.png" alt="logo_beerhour"> BEER HOUR</h2></a>
                 </div>
             @endif
             <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push">
