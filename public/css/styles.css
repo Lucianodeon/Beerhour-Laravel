@@ -31,8 +31,9 @@ body{
 	font-weight: bold;
 	color: white;
 }
-.user{background-image: url(../img/bg-body.png);
-color: black;
+.user{
+	background-image: url(../img/bg-body.png);
+	color: black;
 }
 /* Container */
 .container {
