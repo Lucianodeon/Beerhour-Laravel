@@ -86,14 +86,16 @@
       </form>
     </div>
 </div>
-
+</div>
 @endforeach
 
 
 
       </main>
-
+      </div>
     </body>
+
+
 
   </html>
 
