@@ -18,7 +18,6 @@
       <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Lobster&display=swap" rel="stylesheet">
       <title>BEER HOUR</title>
-      <title></title>
     </head>
     <body class="user">
 
@@ -32,7 +31,7 @@
           <span class="small text-danger"></span>
         </div>
         <div class="form-group row">
-          <textarea name="descripcion" rows="8" cols="80" ></textarea>
+          <textarea class="redondeo" name="descripcion" rows="8" cols="80" ></textarea>
         </div>
 
             <div class="form-group row mb-0">
@@ -47,7 +46,7 @@
 
 @foreach ($posts as $post)
 
-  <div class="content">
+  <div class="content2">
     <div class="content-nav">
   <a href="/profile/{{$post->user->id}}">  <img src="/storage/{{$post->user->avatar}}" alt="foto2"></a>
     <h2>{{ $post->user->email }}</h2>
@@ -59,10 +58,10 @@
       <h3>{{ $post->descripcion }}</h3>
       <div class="panel-footer">
                                <h4><a href="#" title="Nature Portfolio">{{ $post->title }}</a></h4>
-                               <span class="pull-right">
-                                   <span class="like-btn">
-                                       <i id="like{{$post->id}}" class="glyphicon glyphicon-thumbs-up {{ auth()->user()->hasLiked($post) ? 'like-post' : '' }}"></i> <div id="like{{$post->id}}-bs3">{{ $post->likers()->get()->count() }}</div>
-                                   </span>
+                               <span class="pull-right like">
+                                   <div class="like-btn">
+                                       <i id="like{{$post->id}}" class="glyphicon glyphicon-thumbs-up {{ auth()->user()->hasLiked($post) ? 'like-post' : '' }}"></i> <span id="like{{$post->id}}-bs3">{{ $post->likers()->get()->count() }}</span>
+                                   </div>
                                </span>
       </div>
       @if ($post->cantidadComentarios==null)
@@ -71,7 +70,7 @@
         {{$post->$i->descripcion}}
       @endfor
       @endif
-        <form method="POST" action="/addcoment" enctype="multipart/form-data">
+        <form class="centro-comentario" method="POST" action="/addcoment" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
           <textarea name="descripcion" rows="8" cols="80" ></textarea>
@@ -87,14 +86,16 @@
       </form>
     </div>
 </div>
-
+</div>
 @endforeach
 
 
 
       </main>
-
+      </div>
     </body>
+
+
 
   </html>
 

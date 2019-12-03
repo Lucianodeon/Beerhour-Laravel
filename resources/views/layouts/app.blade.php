@@ -24,20 +24,19 @@
   <header> <!-- Encabezadp -->
     <nav class="main-nav">
 
-
-      <a href=@php view("home")@endphp><h2 class="logo"><img src="img/logo.png" alt="logo_beerhour"> BEER HOUR</h2></a>
+      <a href="{{ route('home') }}"><h2 class="logo"><img src="/img/logo.png" alt="logo_beerhour"> BEER HOUR</h2></a>
 
       <ul class="menu access">
-        <li><a class="usuarios" href=@php view("users")@endphp> Users </a></li>
-        <li><a href=@php view("profile")@endphp><img src="img/profile.png" alt="profile"></a></li>
-        <li><a href=><img src="img/exit.png" alt="logout"></a></li>
-
+        <li><a class="usuarios" href="{{ route('users') }}"> Users </a></li>
+        <li><a href="/profile/{{Auth::user()->id}}"><img src="/img/profile.png" alt="profile"></a></li>
+        <li><a href="{{ route('logout') }}"><img src="/img/exit.png" alt="logout"></a></li>
       </ul>
 
     </nav>
   </header>
+
   @yield('content')
-  <div class="container"> <!-- Contenedor ppal -->
+
 
 </body>
 </html>

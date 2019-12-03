@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>REGISTRO</title>
+  </head>
+  <body class="user">
+
+  </body>
+</html>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

@@ -2,10 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Lobster&display=swap">
+
     <title></title>
   </head>
   <body>
     @yield('content')
+
     <nav class="uk-navbar-container uk-margin" uk-navbar>
     <div class="uk-navbar-left">
 

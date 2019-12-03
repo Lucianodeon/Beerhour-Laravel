@@ -15,9 +15,6 @@ li {
 body{
 	margin: 0 auto;
 }
-.logo{
-	font-family:Chilanka;
-}
 
 .regi{
 	background-image: url(../img/wheat.png);
@@ -34,8 +31,9 @@ body{
 	font-weight: bold;
 	color: white;
 }
-.user{background-image: url(../img/bg-body.png);
-color: black;
+.user{
+	background-image: url(../img/bg-body.png);
+	color: black;
 }
 /* Container */
 .container {
@@ -47,6 +45,7 @@ color: black;
 	float:left;
 	margin-right: 30px;
   color: #fff;
+	font-family:Chilanka;
 }
 .prof{
 	width: 50px;
@@ -54,11 +53,44 @@ color: black;
 
 .main-nav {
 	background-color: rgb(6, 11, 40);
-	padding: 12px 15px;
+	padding: 5px 15px;
 	overflow: hidden;
   color: white;
 	width: 100%;
+}
 
+.backgroundNav{
+	background-color: rgb(6, 11, 40);
+  padding: 10px 15px;
+  overflow: hidden;
+  color: white;
+  width: 100%;
+}
+
+.backgroundNav img{
+	width:50px;
+	background-color: white;
+	border-radius: 50%;
+	border: solid 1px black;
+}
+
+.backgroundNav a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.backgroundNav a {
+	margin-right: 30px;
+	line-height: 39px;
+	border-top: 40px;
+	margin-top: 5px;
+	margin-bottom: -15px;
+}
+
+.login-register{
+	float: right;
+	padding-top: 7px;
 }
 
 .main-nav li a {
@@ -236,6 +268,18 @@ padding: 3px 15px;
 	margin-top: 15px;
 	margin: 0 auto;
 	border-radius: 3.5%;
+	margin-bottom: 15px;
+}
+
+.content2{
+	max-width: 95vw;
+	padding: 0;
+	overflow: hidden;
+	justify-content: center;
+	flex-direction: row;
+	margin-top: 15px;
+	margin: 0 auto;
+	border-radius: 3.5%;
 }
 
 .content-nav{
@@ -269,11 +313,15 @@ padding: 3px 15px;
 }
 .content-pie{
 	background: #fff;
-	width: 100%;
-	color: black;
+  width: 100%;
+  color: black;
 	padding: 0;
-	height: 100px;
+  height: 310px;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 20px;
 	text-align: left;
+
 
 }
 .content-pie h3{
@@ -291,7 +339,10 @@ padding: 3px 15px;
 	text-transform: uppercase;
 	font-family: Anton;
 	font-size: 40pt;
+}
 
+.redondeo{
+	border-radius: 5px;
 }
 
 .registro {
@@ -319,8 +370,27 @@ padding: 3px 15px;
 
 }
 
+.like{
+    width: 220px;
+    margin-top: 50px;
+}
+
+.like-btn {
+    background: #3399ff none repeat scroll 0 0;
+    border-radius: 3px;
+    color: white;
+    padding: 7px 3px 3px 7px;
+    margin-right: 5px;
+    margin-top: -5px;
+    width: 60px;
+}
+.centro-comentario{
+    margin-left: 22%;
+    margin-top: 10px;
+}
+
 .centrar{
-	width: 54%;
+	width: 39%;
 }
 
 .content form button{

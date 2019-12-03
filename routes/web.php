@@ -29,3 +29,4 @@ Route::get('users', 'HomeController@users')->name('users');
 Route::get('user/{id}', 'HomeController@user')->name('user.view');
 Route::post('ajaxRequest', 'HomeController@ajaxRequest')->name('ajaxRequest');
 Route::post('ajaxRequest', 'HomeController@ajaxRequest2')->name('ajaxRequest');
+Route::get("/logout", "logoutController@logout");
