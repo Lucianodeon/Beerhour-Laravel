@@ -28,7 +28,7 @@
 
       <ul class="menu access">
         <li><a class="usuarios" href="{{ route('users') }}"> Users </a></li>
-        <li><a href="/profile/{{Auth::user()}}"><img src="/img/profile.png" alt="profile"></a></li>
+        <li><a href="/profile/{{Auth::user()->id}}"><img src="/img/profile.png" alt="profile"></a></li>
         <li><a href="{{ route('logout') }}"><img src="/img/exit.png" alt="logout"></a></li>
       </ul>
 

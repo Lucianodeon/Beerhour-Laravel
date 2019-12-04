@@ -73,7 +73,7 @@
         <form class="centro-comentario" method="POST" action="/addcoment" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
-          <textarea name="descripcion" rows="8" cols="80" ></textarea>
+          <textarea class="centrare2" name="descripcion" rows="8" cols="80" ></textarea>
         </div>
 
             <div class="form-group row mb-0">
